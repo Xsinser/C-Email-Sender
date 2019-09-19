@@ -1,0 +1,18 @@
+﻿<controls:MetroWindow x:Class="xdirgraf.MainWindow"
+                        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xdirgraf"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="363" Width="538"  WindowStyle="ThreeDBorderWindow" WindowTitleBrush="#FF4C079E">
+    <Grid>
+        <Label Content="Адрес электронной почты:" Margin="154,79,186,209"></Label>
+        <TextBox x:Name="EmailBox" Margin="154,111,154,195"></TextBox>
+        <Label Content="Пароль:" Margin="154,150,285,145"></Label>
+        <PasswordBox x:Name="PasswordBox" PasswordChar ="*"  Margin="154,180,154,126"></PasswordBox>
+        <Button Content="Авторизация" x:Name="LoginButton" Click="LoginButton_Click" Margin="139,231,139,66"></Button>
+    </Grid>
+</controls:MetroWindow>

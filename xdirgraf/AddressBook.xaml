@@ -1,0 +1,29 @@
+﻿<controls:MetroWindow x:Class="xdirgraf.AddressBook"
+                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"  
+                
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xdirgraf"
+        mc:Ignorable="d"
+        Title="Адресная книга" Height="600" Width="700" Closing="MetroWindow_Closing" WindowTitleBrush="#FF4C079E" MouseLeftButtonDown="Email_MouseLeftButtonDown">
+    <Grid>
+        <Label Margin="10,96,593,442">Имя контакта</Label>
+        <!--<ComboBox IsEditable="True" x:Name="NamesCombo" SelectionChanged="NamesCombo_Selected"  TextBoxBase.TextChanged="ComboBox_TextChanged" Margin="14,60,362,482"/>-->
+        <TextBox  x:Name="NamesCombo"  LostKeyboardFocus="NamesCombo_Selected" TextChanged="ComboBox_TextChanged" Margin="14,132,362,410"/>
+        <ListView Visibility="Hidden" x:Name="ListV" Height="100" Margin="14,159,362,0" SelectionChanged="NamesCombo_Selected" VerticalAlignment="Top" Width="316" Background="#FFCBCBCB"></ListView>
+        <Image x:Name="ImageBox" Visibility="Visible" Margin="534,26,46,447" Source="img-profile.png"/>
+        <Button Content="Выбрать изображение" Click="Button_Click" Margin="520,127,30,398"></Button>
+        <Button x:Name="BClick" Content="Сохранить изменения" Click="BClick_Click" Margin="271,504,236,33"/>
+        <ComboBox IsEditable="True" x:Name="Emails"  Margin="14,288,362,255"/>
+        <Button x:Name="AddMail" Content="Добавить" Click="AddMail_Click" Margin="354,268,236,269"/>
+        <ComboBox IsEditable="True" x:Name="GroupCombo"  Margin="14,400,362,143"/>
+        <Button x:Name="AddGroup" Content="Добавить" Margin="354,394,236,143" Click="AddGroup_Click"/>
+        <CheckBox x:Name="CheckPol" Content="Новый контакт" Checked="CheckPol_Checked" Unchecked="CheckPol_Unchecked" Margin="354,138,181,411"/>
+        <Button x:Name="DelMail" Content="Удалить" Click="DelMail_Click" Margin="354,304,236,233"/>
+        <Button  Content="В меню"  Margin="14,10,573,527" Click="Button_Click_1"/>
+        <Label Margin="14,260,514,277" Content="Адреса электронной почты"/>
+        <Label Margin="14,368,514,169" Content="Группа контакта"/>
+    </Grid>
+</controls:MetroWindow>

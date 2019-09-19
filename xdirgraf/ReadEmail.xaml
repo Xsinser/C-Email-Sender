@@ -1,0 +1,29 @@
+﻿<controls:MetroWindow x:Class="xdirgraf.ReadEmail"
+                        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"  
+                      WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xdirgraf"
+        mc:Ignorable="d"
+        Title="Входящие письма" Height="600" Width="821.5" Closing="MetroWindow_Closing" WindowTitleBrush="#FF4C079E" >
+    <Grid Margin="0,0,2,0">
+        <ListBox x:Name="AllSender" MouseDoubleClick="AllSender_MouseEnter" Margin="10,100,542,10" Background="#FFE9E1F1"></ListBox>
+        <RichTextBox x:Name="TextMessag" Margin="465,198,10,70">
+
+        </RichTextBox>
+        <Button x:Name="BackB" Content="Назад в меню" Click="BackB_Click" Margin="10,10,690,532"/>
+        <TextBox x:Name="Email" Margin="465,133,10,409"/>
+        <TextBox x:Name="Header" Margin="465,67,10,469">       </TextBox>
+        <controls:ToggleSwitch x:Name="Decripter"  IsCheckedChanged="Decripter_Checked" Header="Шифрование" Margin="465,499,10,10" OffSwitchBrush="#FFD63636" OnSwitchBrush="#CC0FF019"/>
+        <Label Content="Тема письма" Width="120" Margin="465,100,227,441"/>
+        <Label Content="Адрес Отправителя" Width="120" Margin="465,34,227,507"/>
+        <Label Content="Текст письма" Width="120" Margin="465,165,227,376"/>
+        <Button x:Name="BackCon" Visibility="Hidden" Content="К списку контактов" Click="BackCon_Click" Margin="157,11,525,532"/>
+        <TextBox x:Name="Filter" TextChanged="Filter_TextChanged"  Margin="10,62,542,474"/>
+        <Label Content="Наименование контакта" Margin="10,37,656,504"/>
+        <ComboBox x:Name="Group" SelectionChanged="Group_SelectionChanged"  IsEditable="True" Margin="293,65,380,474"/>
+        <Label Content="Группы" Width="120" Margin="293,44,399,497"/>
+    </Grid>
+</controls:MetroWindow>

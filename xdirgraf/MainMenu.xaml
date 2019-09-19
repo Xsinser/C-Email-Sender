@@ -1,0 +1,25 @@
+﻿<controls:MetroWindow x:Class="xdirgraf.MainMenu"
+                        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"  
+                      WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xdirgraf"
+        mc:Ignorable="d"
+        Title="Главное Меню" Height="383" Width="300" Closing="MetroWindow_Closing"   WindowTitleBrush="#FF4C079E">
+    <Control.Resources>
+        <Image x:Key="resourceImage" Source="C:\Users\Xseno\Documents\Visual Studio 2015\Projects\xdirgraf — копия\xdirgraf\bin\Debug/xi.png"/>
+    </Control.Resources>
+    <Grid>
+        <Button Content="Сменить пользователя" Click="Button_Click_Back" Margin="63,227,64,77"  FontWeight="Bold" FontFamily="Times New Roman" BorderBrush="#FF2C0B74" Background="White" RenderTransformOrigin="0.491,0.875"></Button>
+        <Button Content="Выход" Margin="91,280,95,10" Click="Button_Click_Exit"  FontWeight="Bold" FontFamily="Times New Roman" BorderBrush="#FF2C0B74"/>
+        <Button Content="Написать письмо" Click="Button_Click_Send" Margin="158,10,10,296"   FontWeight="Bold" FontFamily="Times New Roman"/>
+        <Button Content="Входящие письма" Click="Button_Click_Read" Margin="10,10,161,296"   FontWeight="Bold" FontFamily="Times New Roman"/>
+        <Button Content="Адресная книга" Margin="63,160,64,144"  FontWeight="Bold" FontFamily="Times New Roman" BorderBrush="#FF2C0B74" Background="White" Click="Button_Click"/>
+        <Button Content="Исходящие письма" Margin="63,71,64,236"  FontWeight="Bold" FontFamily="Times New Roman"  Click="Button_Click_1" RenderTransformOrigin="0.57,-0.356"/>
+        <Button Content="!" ToolTip="Руководство пользователя"  x:Name="Waring" Click="Waring_Click" FontSize="30"  Margin="238,280,10,26" Style="{DynamicResource MetroCircleButtonStyle}"  FontWeight="Bold" FontFamily="Times New Roman"  Background="#FF4C079E" Foreground="White" />
+        <Button Content="?" ToolTip="О программе" x:Name="AboutProgramm" FontSize="30"  Margin="10,280,238,26" Click="AboutProgramm_Click" Style="{DynamicResource MetroCircleButtonStyle}"  FontWeight="Bold" FontFamily="Times New Roman"  Background="#FF4C079E" Foreground="White" />
+
+    </Grid>
+</controls:MetroWindow>
